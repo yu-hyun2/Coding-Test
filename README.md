@@ -1,3 +1,3 @@
 # Coding-Test
-## BAEK JOON
-## Programmers
+### BAEK JOON
+### Programmers
