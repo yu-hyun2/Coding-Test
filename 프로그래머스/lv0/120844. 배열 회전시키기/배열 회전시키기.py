@@ -1,5 +1,5 @@
 def solution(numbers, direction):
-    if direction == "left":
+    if direction == 'left':
         return numbers[1:] + [numbers[0]]
-    elif direction == "right":
+    else:
         return [numbers[-1]] + numbers[:-1]
