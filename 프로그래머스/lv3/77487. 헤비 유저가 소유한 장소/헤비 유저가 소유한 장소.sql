@@ -1,21 +1,11 @@
-# SELECT A.ID, A.NAME, A.HOST_ID
-# FROM PLACES B, (
-#     SELECT ID, NAME, HOST_ID
-#     FROM PLACES A
-#     GROUP BY ID, NAME, HOST_ID
-#     HAVING COUNT(*)>=2) A
-# WHERE A.ID = B.ID
-# ORDER BY A.ID
-
-# 1. 공간을 둘 이상 등록한 사람
-# SELECT ID, NAME, HOST_ID
+# 1. 둘 이상 등록된(중복되는) 공간
+# SELECT HOST_ID
 # FROM PLACES
 # GROUP BY HOST_ID
 # HAVING COUNT(*)>=2
 # ORDER BY ID
 
-# 2. 그 사람이 등록한 정보 
-
+# 2. 그 공간의 정보 
 SELECT ID, NAME, HOST_ID
 FROM PLACES 
 WHERE HOST_ID IN (
@@ -24,4 +14,3 @@ WHERE HOST_ID IN (
     GROUP BY HOST_ID
     HAVING COUNT(*)>=2) 
 ORDER BY ID
-
