@@ -3,11 +3,9 @@ C = int(input())
 
 if B + C >= 60:
     A += (B+C) // 60
+    A %= 24
     B = (B+C) % 60
-elif B + C < 60:
-    A += (B+C) // 60
-    B = (B+C) % 60
-
-A = A%24
+else:
+    B += C
 
 print(A, B)
