@@ -1,10 +1,9 @@
-num = [31]*(2)
+num =[0] * 31
+
 for i in range(28):
     n = int(input())
-    num.append(n)
+    num[n] = n
 
-num = sorted(num)
-
-for _ in range(30):
-    if _+1 not in num:
-        print(_+1)
+for _ in range(1,31):
+    if num[_] == 0:
+        print(_)
