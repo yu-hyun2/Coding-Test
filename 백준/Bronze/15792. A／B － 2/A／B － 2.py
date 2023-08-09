@@ -1,3 +1,3 @@
 A, B = map(int, input().split())
-
-print(A/B)
+C = A/B
+print(f'{C:.10000f}')
