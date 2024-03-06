@@ -4,5 +4,7 @@ function solution(a, b) {
   var result2 = 2 * a * b;
 
   answer = result1 > result2 ? result1 : result2;
+  if (answer === 0) answer = result1;
+
   return answer;
 }
