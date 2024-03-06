@@ -1,15 +1,15 @@
 function solution(my_string, overwrite_string, s) {
-  var answer = '';
+    let answer = ''
+    const overLength = overwrite_string.length
 
-  for (var i = 0; i < my_string.length; i++) {
-      
-    if (i >= s & i - s < overwrite_string.length) {
-        answer += overwrite_string[i-s]
-    }
-    else {
-        answer += my_string[i];
-    }
-}
-  return answer;
+    for (let index = 0 ; index < my_string.length ; index += 1){
+        if (index >= s & index < s + overLength){
+            answer += overwrite_string[index - s]
 
+        } else {
+            answer += my_string[index]
+
+        }
+    }
+    return answer
 }
