@@ -6,4 +6,4 @@ SELECT
         ELSE 'HIGH'
         END) AS SIZE
 FROM ECOLI_DATA
-
+ORDER BY ID;
